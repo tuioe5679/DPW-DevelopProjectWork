@@ -1,9 +1,8 @@
-package com.tuioe.Develop.Project.Work.domain;
+package com.tuioe.Develop.Project.Work.domain.user;
 
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 
 @Getter
@@ -15,29 +14,32 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private String name;
+    @Column(nullable = false,length = 15)
+    private String nickname;
 
-    @Column(nullable = false)
+    @Column(nullable = false,length = 50)
     private String email;
 
-    @Column
+    @Column(length = 100)
     private String picture;
+
+    @Column(nullable = false)
+    private int jewel;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Role role;
 
     @Builder
-    public User(String name, String email, String picture, Role role) {
-        this.name = name;
+    public User(String nickname, String email, String picture, Role role) {
+        this.nickname = nickname;
         this.email = email;
         this.picture = picture;
         this.role = role;
     }
 
-    public User update(String name,String picture){
-        this.name = name;
+    public User update(String nickname,String picture){
+        this.nickname = nickname;
         this.picture = picture;
         return this;
     }

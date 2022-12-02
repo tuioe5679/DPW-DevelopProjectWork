@@ -1,7 +1,7 @@
 package com.tuioe.Develop.Project.Work.config;
 
 import com.tuioe.Develop.Project.Work.auth.CustomOAuth2UserService;
-import com.tuioe.Develop.Project.Work.domain.Role;
+import com.tuioe.Develop.Project.Work.domain.user.Role;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

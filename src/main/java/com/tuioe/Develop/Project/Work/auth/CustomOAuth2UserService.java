@@ -2,8 +2,8 @@ package com.tuioe.Develop.Project.Work.auth;
 
 import com.tuioe.Develop.Project.Work.auth.dto.OAuthAttributes;
 import com.tuioe.Develop.Project.Work.auth.dto.SessionUser;
-import com.tuioe.Develop.Project.Work.domain.User;
-import com.tuioe.Develop.Project.Work.domain.UserRepository;
+import com.tuioe.Develop.Project.Work.domain.user.User;
+import com.tuioe.Develop.Project.Work.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
