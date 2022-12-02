@@ -1,12 +1,11 @@
 package com.tuioe.Develop.Project.Work.config;
 
 import com.tuioe.Develop.Project.Work.auth.CustomOAuth2UserService;
-import com.tuioe.Develop.Project.Work.domain.user.Role;
+import com.tuioe.Develop.Project.Work.domain.Role;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 
 @EnableWebSecurity

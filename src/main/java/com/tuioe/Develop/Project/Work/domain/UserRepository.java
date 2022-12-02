@@ -1,4 +1,4 @@
-package com.tuioe.Develop.Project.Work.domain.user;
+package com.tuioe.Develop.Project.Work.domain;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

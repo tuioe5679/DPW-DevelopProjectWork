@@ -1,4 +1,4 @@
-package com.tuioe.Develop.Project.Work.domain.user;
+package com.tuioe.Develop.Project.Work.domain;
 
 import lombok.Builder;
 import lombok.Getter;

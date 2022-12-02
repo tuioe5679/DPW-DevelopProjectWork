@@ -1,7 +1,7 @@
 package com.tuioe.Develop.Project.Work.auth.dto;
 
-import com.tuioe.Develop.Project.Work.domain.user.Role;
-import com.tuioe.Develop.Project.Work.domain.user.User;
+import com.tuioe.Develop.Project.Work.domain.Role;
+import com.tuioe.Develop.Project.Work.domain.User;
 import lombok.Builder;
 import lombok.Getter;
 
