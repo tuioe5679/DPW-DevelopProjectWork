@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class IndexController {
 
     @GetMapping("/")
-    public String index(){
+    public String loginCallBack(){
         return "redirect:http://localhost:3000";
     }
 }
