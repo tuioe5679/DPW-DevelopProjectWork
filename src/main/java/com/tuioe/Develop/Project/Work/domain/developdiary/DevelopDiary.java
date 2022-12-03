@@ -1,6 +1,7 @@
 package com.tuioe.Develop.Project.Work.domain.developdiary;
 
 import com.tuioe.Develop.Project.Work.domain.project.Project;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -31,4 +32,12 @@ public class DevelopDiary {
     @ManyToOne(fetch = FetchType.LAZY)// 지연 로딩 (빠른 속도 처리가능)
     @JoinColumn(name = "pro_id")
     private Project project;
+
+    @Builder
+    public DevelopDiary(Long id, String title, String content, Project project) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.project = project;
+    }
 }

@@ -1,5 +1,7 @@
 package com.tuioe.Develop.Project.Work.domain.tag;
 
+import com.tuioe.Develop.Project.Work.domain.project.Project;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
@@ -16,4 +18,15 @@ public class Tag {
 
     @Column(nullable = false,length = 50)
     private String tag;
+
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "pro_id")
+    private Project project;
+
+    @Builder
+    public Tag(Long id, String tag,Project project) {
+        this.id = id;
+        this.tag = tag;
+        this.project = project;
+    }
 }

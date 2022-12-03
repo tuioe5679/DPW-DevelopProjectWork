@@ -2,6 +2,7 @@ package com.tuioe.Develop.Project.Work.domain.comment;
 
 import com.tuioe.Develop.Project.Work.domain.project.Project;
 import com.tuioe.Develop.Project.Work.domain.user.User;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
@@ -35,4 +36,12 @@ public class Comment {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
+
+    @Builder
+    public Comment(Long id, String comment, Project project, User user) {
+        this.id = id;
+        this.comment = comment;
+        this.project = project;
+        this.user = user;
+    }
 }

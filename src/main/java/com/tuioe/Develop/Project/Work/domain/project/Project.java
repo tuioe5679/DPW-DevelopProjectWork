@@ -1,6 +1,7 @@
 package com.tuioe.Develop.Project.Work.domain.project;
 
 import com.tuioe.Develop.Project.Work.domain.tag.Tag;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
@@ -36,4 +37,15 @@ public class Project {
     @ManyToOne(fetch = FetchType.LAZY)// 지연 로딩 (빠른 속도 처리가능)
     @JoinColumn(name = "tag_id")
     private Tag tag;
+
+    @Builder
+    public Project(Long id, String title, String content, String image, String startDate, String endDate, String giturl, Tag tag) {
+        this.title = title;
+        this.content = content;
+        this.image = image;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.giturl = giturl;
+        this.tag = tag;
+    }
 }

@@ -31,10 +31,12 @@ public class User {
     private Role role;
 
     @Builder
-    public User(String nickname, String email, String picture, Role role) {
+    public User(Long id, String nickname, String email, String picture, int jewel, Role role) {
+        this.id = id;
         this.nickname = nickname;
         this.email = email;
         this.picture = picture;
+        this.jewel = jewel;
         this.role = role;
     }
 
