@@ -1,6 +1,7 @@
 package com.tuioe.Develop.Project.Work.domain.developdiary;
 
 import com.tuioe.Develop.Project.Work.domain.project.Project;
+import com.tuioe.Develop.Project.Work.dto.developdiary.DevelopDiaryUpdateDto;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -34,10 +35,17 @@ public class DevelopDiary {
     private Project project;
 
     @Builder
-    public DevelopDiary(Long id, String title, String content, Project project) {
+    public DevelopDiary(Long id, String title, String content,LocalDateTime createDate, Project project) {
         this.id = id;
         this.title = title;
         this.content = content;
+        this.createDate = createDate;
         this.project = project;
+    }
+
+    public DevelopDiary update(DevelopDiaryUpdateDto dto){
+        this.title = dto.getTitle();
+        this.content = dto.getContent();
+        return this;
     }
 }

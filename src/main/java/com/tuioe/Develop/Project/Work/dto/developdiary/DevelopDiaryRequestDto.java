@@ -17,17 +17,17 @@ public class DevelopDiaryRequestDto {
 
     private LocalDateTime createDate;
 
-    private Project project;
+    private Long id;
 
     @Builder
-    public DevelopDiaryRequestDto(String title, String content, LocalDateTime createDate, Project project) {
+    public DevelopDiaryRequestDto(String title, String content, LocalDateTime createDate,Long id) {
         this.title = title;
         this.content = content;
         this.createDate = createDate;
-        this.project = project;
+        this.id = id;
     }
 
-    public DevelopDiary toEntity(){
+    public DevelopDiary toEntity(Project project){
         return DevelopDiary
                 .builder()
                 .title(title)
