@@ -1,9 +1,6 @@
 package com.tuioe.Develop.Project.Work.controller;
 
-import com.tuioe.Develop.Project.Work.auth.CustomOAuth2UserService;
 import com.tuioe.Develop.Project.Work.domain.project.Project;
-import com.tuioe.Develop.Project.Work.domain.user.User;
-import com.tuioe.Develop.Project.Work.domain.user.UserRepository;
 import com.tuioe.Develop.Project.Work.dto.project.ProjectListResponseDto;
 import com.tuioe.Develop.Project.Work.dto.project.ProjectRequestDto;
 import com.tuioe.Develop.Project.Work.dto.project.ProjectResponseDto;
@@ -15,7 +12,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
@@ -52,8 +48,7 @@ public class ProjectController {
     @ApiOperation(value = "프로젝트 삭제",notes = "프로젝트를 삭제합니다")
     @DeleteMapping("/project/{id}")
     public ResponseEntity delete(@PathVariable Long id){
-        projectService.deleteProject(id);
-        return new ResponseEntity("AllDelete",HttpStatus.OK);
+        return new ResponseEntity(projectService.deleteProject(id),HttpStatus.OK);
     }
 
 }

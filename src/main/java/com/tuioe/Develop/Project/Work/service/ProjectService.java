@@ -33,7 +33,8 @@ public class ProjectService {
 
     @Transactional
     public ProjectResponseDto findProject(Long id){
-        return new ProjectResponseDto().createProDto(projectRepository.findById(id).get());
+        Project project = projectRepository.findById(id).get();
+        return new ProjectResponseDto().createProDto(project);
     }
 
     @Transactional
@@ -47,13 +48,14 @@ public class ProjectService {
     public Project updateProject(Long id, ProjectUpdateDto dto){
         Project project = projectRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("해당 프로젝트가 없습니다"));
-        return project.update(dto.getTitle(),dto.getContent(),dto.getEndDate());
+        return project.update(dto);
     }
 
     @Transactional
-    public void deleteProject(Long id){
+    public Long deleteProject(Long id){
         Project project = projectRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("해당 프로젝트가 없습니다"));
         projectRepository.delete(project);
+        return id;
     }
 }

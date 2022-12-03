@@ -1,7 +1,7 @@
 package com.tuioe.Develop.Project.Work.domain.project;
 
-import com.tuioe.Develop.Project.Work.domain.tag.Tag;
 import com.tuioe.Develop.Project.Work.domain.user.User;
+import com.tuioe.Develop.Project.Work.dto.project.ProjectUpdateDto;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -50,10 +50,10 @@ public class Project {
         this.user = user;
     }
 
-    public Project update(String title,String content,String endDate){
-        this.title = title;
-        this.content = content;
-        this.endDate = endDate;
+    public Project update(ProjectUpdateDto dto){
+        this.title = dto.getTitle();
+        this.content = dto.getContent();
+        this.endDate = dto.getStartDate();
         return this;
     }
 
