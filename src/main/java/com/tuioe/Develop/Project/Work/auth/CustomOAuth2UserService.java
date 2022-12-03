@@ -22,6 +22,7 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
 
     private final UserRepository userRepository;
     private final HttpSession httpSession;
+    public static SessionUser sessionUser;
 
     @Override
     public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {
@@ -36,6 +37,7 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
         User user = saveOrUpdate(attributes);
 
         httpSession.setAttribute("user",new SessionUser(user));
+        sessionUser = (SessionUser)httpSession.getAttribute("user");
 
         return new DefaultOAuth2User(Collections.singleton(new SimpleGrantedAuthority(user.getRoleKey())),
                 attributes.getAttributes(),attributes.getNameAttributeKey());
