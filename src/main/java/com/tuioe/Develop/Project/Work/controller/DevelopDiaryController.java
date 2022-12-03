@@ -12,6 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+//Swagger API 명세서 페이지 -> http://localhost:8080/swagger-ui/index.html#/
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api")
