@@ -4,7 +4,6 @@ import com.tuioe.Develop.Project.Work.domain.user.Role;
 import com.tuioe.Develop.Project.Work.domain.user.User;
 import lombok.Builder;
 import lombok.Getter;
-
 import java.util.Map;
 
 @Getter

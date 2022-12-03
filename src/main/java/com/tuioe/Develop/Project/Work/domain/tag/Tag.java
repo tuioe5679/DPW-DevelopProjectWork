@@ -19,7 +19,7 @@ public class Tag {
     @Column(nullable = false,length = 50)
     private String tag;
 
-    @OneToMany(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "pro_id")
     private Project project;
 
