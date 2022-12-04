@@ -10,18 +10,16 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class TagRequestDto {
 
-    private Long id;
     private String tag;
-    private Project project;
+    private Long id;
 
     @Builder
-    public TagRequestDto(Long id, String tag, Project project) {
-        this.id = id;
+    public TagRequestDto(String tag, Long id) {
         this.tag = tag;
-        this.project = project;
+        this.id = id;
     }
 
-    public Tag toEntity(){
+    public Tag toEntity(Project project){
         return Tag
                 .builder()
                 .tag(tag)

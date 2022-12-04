@@ -1,6 +1,7 @@
 package com.tuioe.Develop.Project.Work.domain.tag;
 
 import com.tuioe.Develop.Project.Work.domain.project.Project;
+import com.tuioe.Develop.Project.Work.dto.tag.TagUpdateDto;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,5 +29,10 @@ public class Tag {
         this.id = id;
         this.tag = tag;
         this.project = project;
+    }
+
+    public Tag update(TagUpdateDto dto){
+        this.tag = dto.getTag();
+        return this;
     }
 }
