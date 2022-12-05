@@ -1,0 +1,179 @@
+@font-face {
+    font-family: "NanumSquareRoundL";
+    src: url(../font/NanumSquareR.otf);
+}
+
+body{
+    margin: 0px;
+    background-color: rgb(251, 251, 251);
+}
+
+a{
+    text-decoration: none;
+    color: inherit; 
+}
+
+li{
+    list-style-type: none;
+}
+
+li a{
+    color: white;
+    padding-left: 20px;
+    margin: 10px auto;
+    font-weight: bold;
+}
+
+.blog-profile{
+    width: 22%;
+    height: 100%;
+    text-align: center;
+    position: fixed;
+    overflow: auto;
+    margin: auto;
+    padding-top: 7%;
+    background-color: rgb(255, 255, 255);
+}
+
+.blog-profile img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    margin: 16 0;
+    object-fit: cover;
+}
+
+.logo svg{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.logo{
+    display: flex;
+    margin-top: 5px;
+}
+
+.blog-profile > .username{
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.blog-profile > .nickname{
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.blog-profile hr{
+    margin-top: 50px;
+}
+
+.borad{
+    width: 45%;
+    text-align: left;
+    margin: auto;
+    padding-top: 5%;
+}
+
+.borad > .borad_list{
+    padding-top: 50px;
+}
+
+.borad > .borad_list > .board_content {
+    font-size: 14px;
+}
+
+
+.borad a{
+    color: rgb(38, 146, 255);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.borad > .borad_list > .board_title{
+    padding-bottom: 10px;
+}
+
+.container{
+    margin-top: 100px;
+}
+
+#box {
+    width: 1000px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 30px auto;
+    transition: all 0.3s cubic-bezier(0.42, 0.0, 0.58, 1.0);
+    background-color: rgb(255, 255, 255);
+}
+
+#box * {
+    font-family: "NanumSquareRoundL";
+}
+
+#box .board_box{
+    margin-left: 30px;
+}
+
+#box .main{
+    display: flex;
+}
+
+#box .title_box {
+    display: flex;
+}
+
+#box a:hover .heading{
+    color: rgb(35, 126, 255);
+}
+
+#box .title_box .tag{
+    margin: 20px 10px;
+    width: auto;
+    padding: 5px 10px;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 20px;
+}
+
+#box .img {
+    width: 20%;
+    padding: 0;
+}
+
+#box .heading {
+    font-size: 28px;
+}
+  
+#box .data {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: #666;
+}
+  
+#box .data span {
+    padding: 0;
+}
+  
+#box .data .date {
+    margin-bottom: 2px;
+}
+  
+#box .data .user-id {
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    margin-top: 2px;
+}
+  
+#box .texts {
+    font-size: 14px;
+    line-height: 20px;
+    margin-right: 20px;
+}

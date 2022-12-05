@@ -1,0 +1,64 @@
+body{
+    margin: 0px;
+}
+
+.blog-nav{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    padding-left: 150px;
+    top: 0px;
+    z-index: 10;
+}
+
+.menu{
+    margin-left: 50%;
+    display: flex;
+}
+
+.menu > li {
+    padding-left: 50px;
+}
+
+.menu > li > a{
+    font-size: 15px;
+    color: rgb(99, 99, 99);
+}
+
+.title{
+    padding-left: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "NanumSquareRoundL";
+}
+  
+.title > a{
+    color: rgb(49, 49, 49);
+}
+
+.menu > button {
+    width: 100px;
+    height: 35px;
+    background-color: #46c4ff;
+    color: white;
+    border: none;
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: "NanumSquareRoundL";
+}
+
+.menu > button:hover {
+    background-color: #28bbff;
+}
+
+
+@font-face {
+    font-family: "NanumSquareRoundL";
+    src: url(../font/NanumSquareR.otf);
+}
