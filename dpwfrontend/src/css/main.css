@@ -24,25 +24,6 @@ li a{
     font-weight: bold;
 }
 
-.blog-profile{
-    width: 22%;
-    height: 100%;
-    text-align: center;
-    position: fixed;
-    overflow: auto;
-    margin: auto;
-    padding-top: 7%;
-    background-color: rgb(255, 255, 255);
-}
-
-.blog-profile img{
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
-    margin: 16 0;
-    object-fit: cover;
-}
-
 .logo svg{
     width: 20px;
     height: 20px;
@@ -52,24 +33,6 @@ li a{
 .logo{
     display: flex;
     margin-top: 5px;
-}
-
-.blog-profile > .username{
-    color: rgb(0, 0, 0);
-    font-size: 18px;
-    font-weight: bold;
-    padding-top: 10px;
-}
-
-.blog-profile > .nickname{
-    color: rgb(0, 0, 0);
-    font-size: 25px;
-    font-weight: bold;
-    padding-top: 20px;
-}
-
-.blog-profile hr{
-    margin-top: 50px;
 }
 
 .borad{

@@ -30,7 +30,7 @@ body{
 }
 
 .title{
-    padding-left: 20px;
+    width: 300px;
     font-size: 25px;
     font-weight: bold;
     font-family: "NanumSquareRoundL";
@@ -41,7 +41,7 @@ body{
 }
 
 .menu > button {
-    width: 100px;
+    width: 120px;
     height: 35px;
     background-color: #46c4ff;
     color: white;
@@ -61,4 +61,18 @@ body{
 @font-face {
     font-family: "NanumSquareRoundL";
     src: url(../font/NanumSquareR.otf);
+}
+.user{
+}
+
+.user .profile img{
+    width: 8%;
+    margin-left: 20px;
+    border-radius: 20px;
+}
+
+.user .username{
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: bold;
 }

@@ -1,6 +1,7 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import '../../css/header.css'
-import Modal from "../Modal";
+import Modal from "./Modal";
+import Axios from 'axios';
 
 function Header() {
     // useState를 사용하여 open상태를 변경한다. (open일때 true로 만들어 열리는 방식)
@@ -13,6 +14,25 @@ function Header() {
         setModalOpen(false);
     };
 
+    const [loginUser, setLoginuser] = useState();
+    const [loginText, setLoginText] = useState();
+
+    const login = () => {
+        Axios.get("api/login").then((response) => {
+            setLoginuser(response.data);
+            if (response.data === "") {
+                setLoginText("로그인");
+            }
+            else {
+                setLoginText("로그아웃");
+            }
+        }).catch(err => console.log(err))
+    }
+
+    useEffect(() => {
+        login();
+    }, [])
+
     return (
         <div class="DPW">
             <div class="blog-nav">
@@ -21,7 +41,15 @@ function Header() {
                 </div>
                 <ul class="menu">
                     <button>프로젝트 생성</button>
-                    <button onClick={openModal}>로그인</button>
+                    <button onClick={openModal}>{loginText}</button>
+                    {loginUser &&
+                        <div class="user">
+                            <a href="/user">
+                                <span class="profile"><img src={loginUser.picture} alt="" /></span>
+                                <span class="username">{loginUser.name}</span>
+                            </a>
+                        </div>
+                    }
                 </ul>
                 <Modal open={modalOpen} close={closeModal} header="Modal heading">
                 </Modal>

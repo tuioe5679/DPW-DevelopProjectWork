@@ -1,10 +1,12 @@
 import React from "react";
 import GithubButton from 'react-github-login-button'
-import '../css/modal.css'
+import '../../css/modal.css'
 
-const Modal = (props) => {
+function Modal (props) {
 
     const { open, close, header } = props;
+
+    const islogin = false;
 
     return (
         <div className={open ? 'openModal modal' : 'modal'}>
@@ -18,7 +20,14 @@ const Modal = (props) => {
                     </header>
                     <main>
                         <div class="Github_Login">
-                            <GithubButton></GithubButton>
+                            <GithubButton
+                                type="dark" // can be light or dark
+                                onClick={() => {
+                                    window.location.href = "http://localhost:8080/oauth2/authorization/github"
+                                    islogin = true;
+                                }
+                                }
+                            />
                         </div>
                     </main>
                     <footer>

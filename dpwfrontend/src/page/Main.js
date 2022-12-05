@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../css/main.css'
+import Axios from 'axios';
 import Header from './component/Header';
 
 function Main() {
+
+    
 
     return (
         <div>
@@ -11,7 +14,7 @@ function Main() {
                 <div id="box">
                     <a href="asdf">
                         <div class="main">
-                            <img class="img" src="" alt="" />
+                            <img class="img" src="img/NackHacker.jpg" alt="" />
                             <div class="board_box">
                                 <div class="title_box">
                                     <h1 class="heading">2차 프로젝트</h1>
