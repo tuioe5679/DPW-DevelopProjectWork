@@ -1,6 +1,7 @@
 package com.tuioe.Develop.Project.Work.service;
 
 import com.tuioe.Develop.Project.Work.auth.CustomOAuth2UserService;
+import com.tuioe.Develop.Project.Work.auth.dto.SessionUser;
 import com.tuioe.Develop.Project.Work.domain.project.Project;
 import com.tuioe.Develop.Project.Work.domain.project.ProjectRepository;
 import com.tuioe.Develop.Project.Work.domain.user.User;
@@ -11,6 +12,8 @@ import com.tuioe.Develop.Project.Work.dto.project.ProjectResponseDto;
 import com.tuioe.Develop.Project.Work.dto.project.ProjectUpdateDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import javax.servlet.http.HttpSession;
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
@@ -23,6 +26,8 @@ public class ProjectService {
     private final ProjectRepository projectRepository;
 
     private final UserRepository userRepository;
+
+    private final HttpSession httpSession;
 
     @Transactional
     public List<ProjectListResponseDto> findAllProject(){
@@ -39,8 +44,8 @@ public class ProjectService {
 
     @Transactional
     public Project createProject(ProjectRequestDto dto){
-        String email = CustomOAuth2UserService.sessionUser.getEmail();
-        Optional<User> user = userRepository.findByEmail(email);
+        SessionUser sessionUser = (SessionUser)httpSession.getAttribute("user");
+        Optional<User> user = userRepository.findByEmail(sessionUser.getEmail());
         return projectRepository.save(dto.toEntity(user.get()));
     }
 
