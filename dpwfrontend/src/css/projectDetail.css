@@ -1,0 +1,104 @@
+@font-face {
+    font-family: "NanumSquareRoundL";
+    src: url(../font/NanumSquareR.otf);
+}
+
+body{
+    margin: 0px;
+    background-color: rgb(251, 251, 251);
+}
+
+.project_container{
+    width: 1000px;
+    height: 950px;
+    margin: 0 auto;
+    margin-top: 125px;
+    margin-bottom: 45px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+.project_box {
+    background-color: aliceblue;
+    border-radius: 10px;
+    height: 350px;
+}
+
+.project_header .project_title{
+    float: none;
+}
+
+.project_image{
+    float: left;
+    width: 25%;
+    height: 300px;
+}
+
+.project_header .project_tags{
+    height: 20px;
+}
+
+.project_tags .tag{
+    margin: 20px 0px 0px 0px;
+    margin-right: 10px;
+    width: auto;
+    height: 15px;
+    padding: 5px 10px;
+    text-align: center;
+    background-color: rgb(215, 215, 215);
+    color: white;
+    border-radius: 20px;
+}
+
+.project_image img{
+    width: 100%;
+    margin: 50px;
+    border-radius: 10px;
+}
+
+.project_header .project_title {
+    margin-top: 30px;
+    margin-bottom: 0px;
+    display: flex;
+}
+
+.project_header .title_text{
+    margin-top: 18.72px;
+    margin-left: 10px;
+}
+
+.project_header .Date {
+    margin-right: 300px;
+}
+
+.project_header .Date .date_text {
+    margin-bottom: 10px;
+}
+
+.project_box .project_content{
+    height: 300px;
+    margin: 50px;
+    padding-top: 350px;
+}
+
+.project_header .develop {
+    margin-right: 300px;
+    float: left;
+}
+
+.project_box .project_content h3{
+    width:150px;
+}
+
+.project_header{
+    line-height: 10px;
+    width: 50%;
+    height: 350px;
+    float: right;
+    margin-right: 150px;
+}
+
+.project_content .content_text{
+    height: 500px;
+    width: auto;
+}

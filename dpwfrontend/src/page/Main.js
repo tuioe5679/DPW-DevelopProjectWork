@@ -5,14 +5,12 @@ import Header from './component/Header';
 
 function Main() {
 
-    
-
     return (
         <div>
             <Header></Header>
             <div class="container">
                 <div id="box">
-                    <a href="asdf">
+                    <a href="/project">
                         <div class="main">
                             <img class="img" src="img/NackHacker.jpg" alt="" />
                             <div class="board_box">
