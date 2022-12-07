@@ -1,4 +1,5 @@
 import { React, useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
 import '../../css/header.css'
 import Modal from "./Modal";
 import Axios from 'axios';
@@ -6,6 +7,8 @@ import Axios from 'axios';
 function Header() {
     // useState를 사용하여 open상태를 변경한다. (open일때 true로 만들어 열리는 방식)
     const [modalOpen, setModalOpen] = useState(false);
+
+    const navigate = useNavigate();
 
     const openModal = () => {
         setModalOpen(true);
@@ -20,13 +23,11 @@ function Header() {
     const login = () => {
         Axios.get("api/login").then((response) => {
             setLoginuser(response.data);
-            if (response.data === "") {
-                setLoginText("로그인");
-            }
-            else {
+            if (response.data != "") {
                 setLoginText("로그아웃");
             }
         }).catch(err => console.log(err))
+        setLoginText("로그인");
     }
 
     useEffect(() => {
@@ -40,7 +41,7 @@ function Header() {
                     <a href="/">Develop Project Work</a>
                 </div>
                 <ul class="menu">
-                    <button>프로젝트 생성</button>
+                    <button onClick={()=> navigate('/write')}>프로젝트 생성</button>
                     <button onClick={openModal}>{loginText}</button>
                     {loginUser &&
                         <div class="user">
