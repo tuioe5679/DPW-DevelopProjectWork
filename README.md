@@ -4,7 +4,7 @@
 
 axios: npm install axios
 
-react-github-login-button: npm install --save react-github-login-button
+react-github-login-button: npm install --save react-github-login-button <br>
 (https://www.npmjs.com/package/react-github-login-button) 
 
 dayjs: npm install dayjs
