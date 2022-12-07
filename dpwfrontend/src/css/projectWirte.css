@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "NanumSquareRoundL";
+    src: url(../font/NanumSquareR.otf);
+}
+
+body{
+    margin: 0px;
+    background-color: rgb(251, 251, 251);
+}
+
+.write_container{
+    width: 1000px;
+    height: 1000px;
+    margin: 0 auto;
+    margin-top: 125px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+.project_write{
+    padding-top: 50px;
+    margin: 100px 100px 100px 100px;
+}
+
+.title_input {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgb(171, 171, 171);
+    border-radius: 3px; 
+}
+
+.input{
+    text-align: center;
+}
+
+textarea{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 500px;
+    border: 1px solid rgb(171, 171, 171);
+    border-radius: 3px; 
+}
