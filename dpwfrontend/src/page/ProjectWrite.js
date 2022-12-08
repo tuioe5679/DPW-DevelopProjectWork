@@ -19,6 +19,7 @@ function ProjectWrite() {
             <Header></Header>
             <div class="write_container">
                 <div class="project_write">
+                    <h3 class="page_title">프로젝트 생성</h3>
                     <div class="project_title">
                         <h3>제목</h3>
                         <div class="input">

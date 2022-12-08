@@ -6,6 +6,7 @@
 body{
     margin: 0px;
     background-color: rgb(251, 251, 251);
+    font-family: "NanumSquareRoundL";
 }
 
 .project_container{
@@ -49,6 +50,61 @@ body{
     height: 20px;
 }
 
+.devlopDiary {
+    margin-left: 200px;
+    width: 350px;
+    height: 30px;
+    display: flex;
+}
+
+.devlopDiary h3{
+    width: 70px;
+    margin: 0px;
+    margin-top: 10px;
+}
+
+.developDiary_List {
+    width: 200px;
+    display: block;
+}
+
+.develop_data {
+    width: 80%;
+    height:20px;
+    margin: 0px 50px 20px;
+    padding: 20px 10px 10px 10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+ .medal{
+    width: 200px;
+    margin-left: 200px;
+    margin-top: 20px;
+}
+
+.devlopDiary button{
+    height: 30px;
+    width: 75px;
+    margin-left: 10px;
+    background-color: #7bffd3;
+    color: white;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: "NanumSquareRoundL";
+}
+
+.devlopDiary button:hover{
+    background-color: #4bffc3;
+}
+
+.project_header h3{
+    color: rgb(0, 0, 0);
+}
+
 .project_tags .tag{
     margin: 20px 0px 0px 0px;
     margin-right: 10px;
@@ -63,14 +119,17 @@ body{
 
 .project_header .project_title {
     float: none;
-    margin-top: 30px;
     margin-bottom: 0px;
+    margin-top: -25px;
     display: flex;
 }
 
 .project_header .title_text{
     margin-top: 18.72px;
     margin-left: 10px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .project_header .Date {
@@ -79,12 +138,22 @@ body{
 
 .project_header .Date .date_text {
     margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .project_header .develop {
     margin-right: 300px;
     float: left;
 }
+
+.project_header .develop_name {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 16px;
+}
+
 
 .project_box .project_content{
     height: 300px;

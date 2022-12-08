@@ -11,7 +11,7 @@ function Modal(props) {
             {open ? (
                 <section>
                     <header>
-                        {header}GitHub 로그인
+                        GitHub 로그인
                         <button className="close" onClick={close}>
                             &times;
                         </button>

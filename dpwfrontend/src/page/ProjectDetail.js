@@ -1,8 +1,12 @@
 import React from "react";
 import Header from "./component/Header";
 import '../css/projectDetail.css'
+import { useNavigate } from 'react-router-dom';
 
 function ProjectDetail() {
+
+    const navigate = useNavigate();
+
     return (
         <div>
             <Header></Header>
@@ -16,6 +20,17 @@ function ProjectDetail() {
                             <div class="tag">Java</div>
                             <div class="tag">Java</div>
                         </div>
+                        <div class="devlopDiary">
+                            <h3>개발일지</h3>
+                            <button onClick={() => navigate('/developDiary')}>작성</button>
+                            <div class="developDiary_List">
+                                <a href="/asd"><div class="develop_data">개발일지1</div></a>
+                                <a href="/asd"><div class="develop_data">개발일지1</div></a>
+                                <a href="/asd"><div class="develop_data">개발일지1</div></a>
+                                <a href="/asd"><div class="develop_data">더보기</div></a>
+                            </div>
+                        </div>
+                        <div class="medal">🥇🥇🥇🥇🥇🥇🥇</div>
                         <div class="project_title">
                             <h3>제목</h3>
                             <div class="title_text">프로젝트</div>
@@ -26,7 +41,7 @@ function ProjectDetail() {
                         </div>
                         <div class="develop">
                             <h3>개발자</h3>
-                            tuioe
+                            <div class="develop_name">tuioe</div>
                         </div>
                     </div>
                     <div class="project_content">

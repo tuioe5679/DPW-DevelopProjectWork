@@ -36,7 +36,13 @@ textarea{
     margin: 100px 100px 100px 100px;
 }
 
-.project_title{
+.project_write .page_title{
+    margin-top: -10px;
+    text-align: center;
+    color: #28b4ff;
+}
+
+.project_write .project_title{
     width: 50%;
     float: left;
     margin-bottom: 25px;
