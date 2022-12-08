@@ -19,13 +19,9 @@ body{
 }
 
 .project_box {
-    background-color: aliceblue;
+    background-color: rgb(209, 233, 247);
     border-radius: 10px;
     height: 350px;
-}
-
-.project_header .project_title{
-    float: none;
 }
 
 .project_image{
@@ -34,7 +30,22 @@ body{
     height: 300px;
 }
 
-.project_header .project_tags{
+.project_image img{
+    width: 100%;
+    margin: 50px;
+    border-radius: 10px;
+}
+
+.project_header{
+    line-height: 10px;
+    width: 50%;
+    height: 350px;
+    float: right;
+    margin-right: 150px;
+}
+
+.project_tags {
+    margin-top: 30px;
     height: 20px;
 }
 
@@ -50,13 +61,8 @@ body{
     border-radius: 20px;
 }
 
-.project_image img{
-    width: 100%;
-    margin: 50px;
-    border-radius: 10px;
-}
-
 .project_header .project_title {
+    float: none;
     margin-top: 30px;
     margin-bottom: 0px;
     display: flex;
@@ -75,27 +81,19 @@ body{
     margin-bottom: 10px;
 }
 
+.project_header .develop {
+    margin-right: 300px;
+    float: left;
+}
+
 .project_box .project_content{
     height: 300px;
     margin: 50px;
     padding-top: 350px;
 }
 
-.project_header .develop {
-    margin-right: 300px;
-    float: left;
-}
-
 .project_box .project_content h3{
     width:150px;
-}
-
-.project_header{
-    line-height: 10px;
-    width: 50%;
-    height: 350px;
-    float: right;
-    margin-right: 150px;
 }
 
 .project_content .content_text{

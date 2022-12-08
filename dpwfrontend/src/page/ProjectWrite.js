@@ -12,7 +12,6 @@ function ProjectWrite() {
 
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setendDate] = useState(new Date());
-    const [tagInput, setTagInput] = useState([]);
 
     console.log(dayjs(startDate).format("YYYY-MM-DD"));
     return (

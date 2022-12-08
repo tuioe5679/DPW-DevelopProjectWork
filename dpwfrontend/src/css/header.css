@@ -2,6 +2,11 @@ body{
     margin: 0px;
 }
 
+@font-face {
+    font-family: "NanumSquareRoundL";
+    src: url(../font/NanumSquareR.otf);
+}
+
 .blog-nav{
     position: fixed;
     width: 100%;
@@ -15,8 +20,19 @@ body{
     z-index: 10;
 }
 
+.title{
+    width: 350px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "NanumSquareRoundL";
+}
+  
+.title > a{
+    color: rgb(49, 49, 49);
+}
+
 .menu{
-    margin-left: 50%;
+    margin-left: 45%;
     display: flex;
 }
 
@@ -27,17 +43,6 @@ body{
 .menu > li > a{
     font-size: 15px;
     color: rgb(99, 99, 99);
-}
-
-.title{
-    width: 300px;
-    font-size: 25px;
-    font-weight: bold;
-    font-family: "NanumSquareRoundL";
-}
-  
-.title > a{
-    color: rgb(49, 49, 49);
 }
 
 .menu > button {
@@ -57,14 +62,6 @@ body{
     background-color: #28bbff;
 }
 
-
-@font-face {
-    font-family: "NanumSquareRoundL";
-    src: url(../font/NanumSquareR.otf);
-}
-.user{
-}
-
 .user .profile img{
     width: 8%;
     margin-left: 20px;
@@ -75,4 +72,13 @@ body{
     margin-left: 10px;
     font-size: 15px;
     font-weight: bold;
+}
+
+.jewel {
+    margin-left: 10px;
+    display:inline-block;
+    width: 100px;
+    font-size: 18px;
+    font-weight: bold;
+    color: aquamarine;
 }

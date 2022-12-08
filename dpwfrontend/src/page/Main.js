@@ -9,7 +9,7 @@ function Main() {
         <div>
             <Header></Header>
             <div class="container">
-                <div id="box">
+                <div class="box">
                     <a href="/project">
                         <div class="main">
                             <img class="img" src="img/NackHacker.jpg" alt="" />

@@ -50,15 +50,6 @@ textarea{
     border: 1px solid rgb(171, 171, 171);
     border-radius: 3px; 
 }
-.github_input {
-    float: right;
-    padding: 0px;
-    margin: 0px;
-    width: 95%;
-    height: 40px;
-    border: 1px solid rgb(171, 171, 171);
-    border-radius: 3px; 
-}
 
 .github {
     width: 50%;
@@ -68,6 +59,16 @@ textarea{
 
 .github h3{
     margin-left: 15px;
+}
+
+.github_input {
+    float: right;
+    padding: 0px;
+    margin: 0px;
+    width: 95%;
+    height: 40px;
+    border: 1px solid rgb(171, 171, 171);
+    border-radius: 3px; 
 }
 
 .Date {
@@ -90,6 +91,11 @@ textarea{
     margin-bottom: 10px;
 }
 
+.proejct_Date input{
+    text-align: center;
+    width: 120px;
+}
+
 .tag {
     float: left;
     margin-left: 90px;
@@ -99,6 +105,17 @@ textarea{
 .tags{
      margin-top: 20px;
      margin-left: 15px;
+}
+
+.tag_Input {
+    margin: 0px 5px;
+    width: 60px;
+    height: 25px;
+    text-align: center;
+    background-color: rgb(215, 215, 215);
+    color: white;
+    border: 0px;
+    border-radius: 20px;
 }
 
 .project_button {
@@ -132,20 +149,4 @@ textarea{
 
 .project_button .cancel_btn{
     background-color: #ff4646;
-}
-
-.tag_Input {
-    margin: 0px 5px;
-    width: 60px;
-    height: 25px;
-    text-align: center;
-    background-color: rgb(215, 215, 215);
-    color: white;
-    border: 0px;
-    border-radius: 20px;
-}
-
-.proejct_Date input{
-    text-align: center;
-    width: 120px;
 }

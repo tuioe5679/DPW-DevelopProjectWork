@@ -41,13 +41,14 @@ function Header() {
                     <a href="/">Develop Project Work</a>
                 </div>
                 <ul class="menu">
-                    <button onClick={()=> navigate('/write')}>프로젝트 생성</button>
+                    <button onClick={() => navigate('/write')}>프로젝트 생성</button>
                     <button onClick={openModal}>{loginText}</button>
                     {loginUser &&
                         <div class="user">
                             <a href="/user">
                                 <span class="profile"><img src={loginUser.picture} alt="" /></span>
                                 <span class="username">{loginUser.name}</span>
+                                <spna class="jewel">💎1000</spna>
                             </a>
                         </div>
                     }
