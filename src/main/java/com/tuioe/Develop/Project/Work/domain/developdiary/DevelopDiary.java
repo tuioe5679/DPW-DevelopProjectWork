@@ -5,6 +5,7 @@ import com.tuioe.Develop.Project.Work.dto.developdiary.DevelopDiaryUpdateDto;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
@@ -28,6 +29,7 @@ public class DevelopDiary {
     private String content;
 
     @Column(nullable = false)
+    @CreatedDate
     private LocalDateTime createDate;
 
     @ManyToOne(fetch = FetchType.LAZY)// 지연 로딩 (빠른 속도 처리가능)

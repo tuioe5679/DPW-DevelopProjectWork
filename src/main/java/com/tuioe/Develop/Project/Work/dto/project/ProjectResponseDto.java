@@ -23,8 +23,10 @@ public class ProjectResponseDto {
 
     private String giturl;
 
+    private String username;
+
     @Builder
-    public ProjectResponseDto(Long id, String title, String content, String image, String startDate, String endDate, String giturl) {
+    public ProjectResponseDto(Long id, String title, String content, String image, String startDate, String endDate, String giturl, String username) {
         this.id = id;
         this.title = title;
         this.content = content;
@@ -32,6 +34,7 @@ public class ProjectResponseDto {
         this.startDate = startDate;
         this.endDate = endDate;
         this.giturl = giturl;
+        this.username = username;
     }
 
     public ProjectResponseDto createProDto(Project project){
@@ -44,6 +47,7 @@ public class ProjectResponseDto {
                 .startDate(project.getStartDate())
                 .endDate(project.getEndDate())
                 .giturl(project.getGiturl())
+                .username(project.getUser().getNickname())
                 .build();
     }
 }

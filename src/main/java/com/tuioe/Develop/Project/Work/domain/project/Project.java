@@ -35,7 +35,7 @@ public class Project {
     @Column(length = 100)
     private String giturl;
 
-    @ManyToOne(fetch = FetchType.LAZY)// 지연 로딩 (빠른 속도 처리가능)
+    @ManyToOne(fetch = FetchType.EAGER)// 지연 로딩 (빠른 속도 처리가능)
     @JoinColumn(name = "user_id")
     private User user;
 

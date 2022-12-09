@@ -11,12 +11,18 @@ public class ProjectListResponseDto {
 
     private String content;
 
+    private String startDate;
+
     private String image;
+
+    private String username;
 
     public ProjectListResponseDto(Project project) {
         this.id = project.getId();
         this.title = project.getTitle();
         this.content = project.getContent();
+        this.startDate = project.getStartDate();
         this.image = project.getImage();
+        this.username = project.getUser().getNickname();
     }
 }
