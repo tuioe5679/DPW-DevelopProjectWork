@@ -1,0 +1,110 @@
+@font-face {
+    font-family: "NanumSquareRoundL";
+    src: url(../font/NanumSquareR.otf);
+}
+
+body{
+    margin: 0px;
+    background-color: rgb(251, 251, 251);
+}
+
+a{
+    text-decoration: none;
+    color: inherit; 
+}
+
+li{
+    list-style-type: none;
+}
+
+li a{
+    color: white;
+    padding-left: 20px;
+    margin: 10px auto;
+    font-weight: bold;
+}
+
+.logo svg{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.logo{
+    display: flex;
+    margin-top: 5px;
+}
+
+.diaryList_container{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: block;
+}
+
+.diaryList_box * {
+    font-family: "NanumSquareRoundL";
+}
+
+.diaryList_box {
+    width: 700px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    transition: all 0.3s cubic-bezier(0.42, 0.0, 0.58, 1.0);
+    background-color: rgb(255, 255, 255);
+}
+
+.diaryList_box .diaryList_main{
+    display: flex;
+}
+
+.diaryList_box .img {
+    width: 20%;
+    padding: 0;
+}
+
+.diaryList_box .board_box{
+    margin-left: 30px;
+}
+
+.diaryList_box .title_box {
+    display: flex;
+}
+
+.diaryList_box .heading {
+    font-size: 28px;
+}
+
+.diaryList_box a:hover .heading{
+    color: rgb(35, 126, 255);
+}
+
+.diaryList_box .data {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: #666;
+}
+  
+.diaryList_box .data span {
+    padding: 0;
+}
+  
+.diaryList_box .data .date {
+    margin-bottom: 2px;
+}
+  
+.diaryList_box .data .user-id {
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    margin-top: 2px;
+}
+  
+.diaryList_box .texts {
+    font-size: 14px;
+    line-height: 20px;
+    margin-right: 20px;
+}

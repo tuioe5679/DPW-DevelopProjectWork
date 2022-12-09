@@ -51,14 +51,14 @@ body{
 }
 
 .devlopDiary {
-    margin-left: 200px;
+    margin-left: 400px;
     width: 350px;
     height: 30px;
     display: flex;
 }
 
 .devlopDiary h3{
-    width: 70px;
+    width: 100px;
     margin: 0px;
     margin-top: 10px;
 }
@@ -71,23 +71,17 @@ body{
 .develop_data {
     width: 80%;
     height:20px;
-    margin: 0px 50px 20px;
+    margin-top: 50px;
+    margin-left: -165px;
     padding: 20px 10px 10px 10px;
     border-radius: 10px;
     text-align: center;
     background-color: aliceblue;
 }
 
- .medal{
-    width: 200px;
-    margin-left: 200px;
-    margin-top: 20px;
-}
-
 .devlopDiary button{
     height: 30px;
     width: 75px;
-    margin-left: 10px;
     background-color: #7bffd3;
     color: white;
     border: none;
@@ -119,8 +113,8 @@ body{
 
 .project_header .project_title {
     float: none;
+    margin-top: 5px;
     margin-bottom: 0px;
-    margin-top: -25px;
     display: flex;
 }
 
@@ -146,6 +140,19 @@ body{
 .project_header .develop {
     margin-right: 300px;
     float: left;
+}
+
+.project_header .git {
+    margin-right: 300px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.project_header .git .github_url {
+    width: 500px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .project_header .develop_name {

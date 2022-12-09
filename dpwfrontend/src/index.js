@@ -2,7 +2,8 @@ import { render } from "react-dom";
 import { BrowserRouter, Routes, Route, } from "react-router-dom"
 import ProjectWrite from "./page/ProjectWrite"
 import ProjectDetail from "./page/ProjectDetail";
-import DevelopDiary from "./page/DevelopDiary";
+import DevelopDiaryWrite from "./page/DevelopDiaryWrite";
+import DevelopDiaryList from "./page/DevelopDiaryList";
 import Main from "./page/Main";
 
 
@@ -12,8 +13,9 @@ render(
     <Routes>
       <Route path="/" element={<Main />} />
       <Route path="write" element={<ProjectWrite />} />
-      <Route path="project" element={<ProjectDetail />} />
-      <Route path="developDiary" element={<DevelopDiary/>} />
+      <Route path="project/:id" element={<ProjectDetail />} />
+      <Route path="DevelopDiaryWrite/:id" element={<DevelopDiaryWrite />} />
+      <Route path="developDiaryList" element={<DevelopDiaryList />} />
     </Routes>
   </BrowserRouter>,
   rootElement

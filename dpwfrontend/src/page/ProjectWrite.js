@@ -1,19 +1,47 @@
 import { React, useState } from "react"
+import { useNavigate } from "react-router-dom";
+import { ko } from 'date-fns/esm/locale';
 import Header from "./component/Header";
 import DatePicker from 'react-datepicker'
 import dayjs from "dayjs";
-import { ko } from 'date-fns/esm/locale';
+import Axios from "axios";
 import '../css/projectWirte.css'
 import "react-datepicker/dist/react-datepicker.css";
 
-
-
 function ProjectWrite() {
+
+    const navigate = useNavigate();
 
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setendDate] = useState(new Date());
 
-    console.log(dayjs(startDate).format("YYYY-MM-DD"));
+    const [project, setProject] = useState({
+        title: '',
+        giturl: '',
+        content: ''
+    })
+
+    const getValue = e => {
+        const { name, value } = e.target;
+        setProject({
+            ...project,
+            [name]: value
+        })
+    };
+
+    const submitPosting = () => {
+        Axios.post('/api/project', {
+            title: project.title,
+            giturl: project.giturl,
+            content: project.content,
+            startDate: dayjs(startDate).format("YYYY-MM-DD"),
+            endDate: dayjs(endDate).format("YYYY-MM-DD")
+        }).then(() => {
+            alert('등록 완료');
+        })
+        navigate('/');
+    }
+
     return (
         <div>
             <Header></Header>
@@ -23,16 +51,16 @@ function ProjectWrite() {
                     <div class="project_title">
                         <h3>제목</h3>
                         <div class="input">
-                            <input class="title_input" type='text' placeholder='제목 입력' name='title'></input>
+                            <input class="title_input" type='text' placeholder='제목 입력' onChange={getValue} name='title'></input>
                         </div>
                     </div>
                     <div class="github">
                         <h3>깃허브 URL</h3>
-                        <input class="github_input" type='text' placeholder='깃허브 URL 입력' name='github'></input>
+                        <input class="github_input" type='text' placeholder='깃허브 URL 입력' onChange={getValue} name='giturl'></input>
                     </div>
                     <div class="project_content">
                         <h3>프로젝트 내용</h3>
-                        <div class="input"><textarea type='text' placeholder='프로젝트의 전반적인 내용을 작성하세요'></textarea></div>
+                        <div class="input"><textarea type='text' onChange={getValue} placeholder='프로젝트의 전반적인 내용을 작성하세요' name='content'></textarea></div>
                     </div>
                     <div class="Date">
                         <h3>프로젝트 기간</h3>
@@ -67,8 +95,8 @@ function ProjectWrite() {
                         </div>
                     </div>
                     <div class="project_button">
-                        <button class="submit_btn">작성완료</button>
-                        <button class="cancel_btn">취소하기</button>
+                        <button class="submit_btn" onClick={submitPosting}>작성완료</button>
+                        <button class="cancel_btn" onClick={() => navigate('/main')}>취소하기</button>
                     </div>
                 </div>
             </div>

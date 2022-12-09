@@ -21,7 +21,7 @@ function Header() {
     const [loginText, setLoginText] = useState();
 
     const login = () => {
-        Axios.get("api/login").then((response) => {
+        Axios.get("/api/login").then((response) => {
             setLoginuser(response.data);
             if (response.data != "") {
                 setLoginText("로그아웃");
