@@ -46,6 +46,10 @@ public class User {
         return this;
     }
 
+    public void jewelPlus(int count){
+        this.jewel += count;
+    }
+
     public String getRoleKey(){
         return this.role.getKey();
     }

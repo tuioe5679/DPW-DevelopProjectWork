@@ -5,6 +5,8 @@ import com.tuioe.Develop.Project.Work.dto.developdiary.DevelopDiaryUpdateDto;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
@@ -28,12 +30,13 @@ public class DevelopDiary {
     @Column(nullable = false,length = 2000)
     private String content;
 
-    @Column(nullable = false)
     @CreatedDate
+    @Column(nullable = false)
     private LocalDateTime createDate;
 
     @ManyToOne(fetch = FetchType.LAZY)// 지연 로딩 (빠른 속도 처리가능)
-    @JoinColumn(name = "pro_id")
+    @JoinColumn(name = "pro_id",nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private Project project;
 
     @Builder

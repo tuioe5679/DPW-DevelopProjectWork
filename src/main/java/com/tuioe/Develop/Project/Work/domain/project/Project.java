@@ -1,10 +1,13 @@
 package com.tuioe.Develop.Project.Work.domain.project;
 
+import com.tuioe.Develop.Project.Work.domain.developdiary.DevelopDiary;
 import com.tuioe.Develop.Project.Work.domain.user.User;
 import com.tuioe.Develop.Project.Work.dto.project.ProjectUpdateDto;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 import javax.persistence.*;
 
 @Getter
@@ -36,8 +39,10 @@ public class Project {
     private String giturl;
 
     @ManyToOne(fetch = FetchType.EAGER)// 지연 로딩 (빠른 속도 처리가능)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user_id",nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)//유저 삭제시 프로젝트 삭제
     private User user;
+
 
     @Builder
     public Project(Long id, String title, String content, String image, String startDate, String endDate, String giturl,User user) {

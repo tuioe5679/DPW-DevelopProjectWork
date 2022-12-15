@@ -21,6 +21,13 @@ public class DevelopDiaryController {
 
     private final DevelopDiaryService developDiaryService;
 
+
+    @ApiOperation(value = "개발일지 목록 조회",notes = "개발일지를 전체 조회합니다")
+    @GetMapping("/developdiarys/{id}")
+    public ResponseEntity findAll(@PathVariable Long id){
+        return new ResponseEntity<>(developDiaryService.findAllDevelopDiary(id), HttpStatus.OK);
+    }
+
     @ApiOperation(value = "단건 개발일지 조회",notes = "개발일지를 단건 조회합니다")
     @GetMapping("/developdiary/{id}")
     public ResponseEntity<DevelopDiaryResponseDto> findById(@PathVariable Long id){
