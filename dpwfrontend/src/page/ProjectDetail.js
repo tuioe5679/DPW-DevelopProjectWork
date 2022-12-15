@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "./component/Header";
 import '../css/projectDetail.css'
 import Axios from 'axios';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 function ProjectDetail() {
 
@@ -18,7 +18,12 @@ function ProjectDetail() {
         }).catch(err => console.log(err));
     }, []);
 
-    console.log(projectContent);
+    const projectDelete = () => {
+        Axios.delete('/api/project/' + id).then((response) => {
+            alert("삭제 완료");
+        })
+        navigate("/");
+    }
 
     return (
         <div>
@@ -26,7 +31,7 @@ function ProjectDetail() {
             <div class="project_container">
                 <div class="project_box">
                     <div class="project_image">
-                        <img class="img" src="/img/NackHacker.jpg" alt="asd" />
+                        <img class="img" src="/img/1.png" alt="asd" />
                     </div>
                     <div class="project_header">
                         <div class="project_tags">
@@ -37,7 +42,7 @@ function ProjectDetail() {
                             <h3>개발일지</h3>
                             <button onClick={() => navigate('/DevelopDiaryWrite/' + id)}>작성</button>
                             <div class="developDiary_List">
-                                <a href="/developDiaryList"><div class="develop_data">더보기</div></a>
+                                <Link to={`/developDiaryList/${id}`}><div class="develop_data">더보기</div></Link>
                             </div>
                         </div>
                         <div class="project_title">
@@ -61,6 +66,10 @@ function ProjectDetail() {
                     </div>
                     <div class="project_content">
                         <h3>내용</h3>
+                        <div class="project_btn">
+                            <button class="update_btn">수정</button>
+                            <button class="delete_btn" onClick={projectDelete}>삭제</button>
+                        </div>
                         <div class="content_text">{projectContent.content}</div>
                     </div>
                 </div>
