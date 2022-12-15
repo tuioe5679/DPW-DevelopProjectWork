@@ -48,7 +48,7 @@ function Header() {
                             <a href="/user">
                                 <span class="profile"><img src={loginUser.picture} alt="" /></span>
                                 <span class="username">{loginUser.name}</span>
-                                <spna class="jewel">💎1000</spna>
+                                <spna class="jewel">💎{loginUser.jewel}</spna>
                             </a>
                         </div>
                     }
