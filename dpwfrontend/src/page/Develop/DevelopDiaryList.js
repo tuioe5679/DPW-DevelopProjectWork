@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import '../css/developDiaryList.css'
+import '../../css/developDiaryList.css'
 import Axios from 'axios';
-import Header from './component/Header';
+import Header from '../../page/component/Header';
 import { useParams } from 'react-router-dom';
 import dayjs from 'dayjs';
 
@@ -15,8 +15,6 @@ function Main() {
         Axios.get('/api/developdiarys/' + id).then((response) => {
             setDevelopDiaryList(response.data);
         }).catch(err => console.log(err));
-
-        console.log(developDiaryList);
     }, [])
 
     return (

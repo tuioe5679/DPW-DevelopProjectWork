@@ -1,11 +1,11 @@
 import { React, useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { ko } from 'date-fns/esm/locale';
-import Header from "./component/Header";
+import Header from "../../page/component/Header";
 import DatePicker from 'react-datepicker'
 import dayjs from "dayjs";
 import Axios from "axios";
-import '../css/projectWirte.css'
+import '../../css/projectWirte.css'
 import "react-datepicker/dist/react-datepicker.css";
 
 function ProjectWrite() {

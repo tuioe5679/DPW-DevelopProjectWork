@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from "react"
-import Header from "./component/Header"
-import "../css/developDiary.css"
+import Header from "../../page/component/Header"
+import "../../css/developDiary.css"
 import { useNavigate, useParams } from "react-router-dom"
 import Axios from "axios"
 import dayjs from "dayjs";

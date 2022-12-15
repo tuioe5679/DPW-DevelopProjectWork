@@ -30,6 +30,16 @@ function Header() {
         setLoginText("로그인");
     }
 
+    const loginbtn = () => {
+        if (loginText === "로그인") {
+            openModal();
+        }
+        else {
+            Axios.post("/api/logout").then((response) => {
+            }).catch(err => console.log(err))
+        }
+    }
+
     useEffect(() => {
         login();
     }, [])
@@ -42,7 +52,7 @@ function Header() {
                 </div>
                 <ul class="menu">
                     <button onClick={() => navigate('/write')}>프로젝트 생성</button>
-                    <button onClick={openModal}>{loginText}</button>
+                    <button onClick={loginbtn}>{loginText}</button>
                     {loginUser &&
                         <div class="user">
                             <a href="/user">

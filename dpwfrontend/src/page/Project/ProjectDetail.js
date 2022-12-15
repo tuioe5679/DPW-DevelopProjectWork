@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Header from "./component/Header";
-import '../css/projectDetail.css'
+import Header from "../../page/component/Header";
+import '../../css/projectDetail.css'
 import Axios from 'axios';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 
@@ -24,6 +24,8 @@ function ProjectDetail() {
         })
         navigate("/");
     }
+
+
 
     return (
         <div>
@@ -67,7 +69,7 @@ function ProjectDetail() {
                     <div class="project_content">
                         <h3>내용</h3>
                         <div class="project_btn">
-                            <button class="update_btn">수정</button>
+                            <button class="update_btn" onClick={() => navigate('/projectUpdate/' + id, { state: projectContent })}>수정</button>
                             <button class="delete_btn" onClick={projectDelete}>삭제</button>
                         </div>
                         <div class="content_text">{projectContent.content}</div>
