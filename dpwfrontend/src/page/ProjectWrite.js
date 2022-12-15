@@ -96,7 +96,7 @@ function ProjectWrite() {
                     </div>
                     <div class="project_button">
                         <button class="submit_btn" onClick={submitPosting}>작성완료</button>
-                        <button class="cancel_btn" onClick={() => navigate('/main')}>취소하기</button>
+                        <button class="cancel_btn" onClick={() => navigate('/')}>취소하기</button>
                     </div>
                 </div>
             </div>
