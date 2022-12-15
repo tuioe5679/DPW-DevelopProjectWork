@@ -38,9 +38,9 @@ public class Project {
     @Column(length = 100)
     private String giturl;
 
-    @ManyToOne(fetch = FetchType.EAGER)// 지연 로딩 (빠른 속도 처리가능)
-    @JoinColumn(name = "user_id",nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)//유저 삭제시 프로젝트 삭제
+    @ManyToOne(fetch = FetchType.EAGER)// User:Project = 1:N 관계
+    @JoinColumn(name = "user_id",nullable = false)// user_id로 외래키 지정,널값 허용 X
+    @OnDelete(action = OnDeleteAction.CASCADE)//유저 삭제시 연관 프로젝트 삭제
     private User user;
 
 

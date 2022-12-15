@@ -23,6 +23,7 @@ public class DevelopDiaryService {
 
     private final ProjectRepository projectRepository;
 
+    // 개발일지 목록 조회
     @Transactional
     public List<DevelopDiaryListResponseDto> findAllDevelopDiary(Long id){
         return developDiaryRepository.findByProjectId(id).stream()
@@ -30,12 +31,14 @@ public class DevelopDiaryService {
                 .collect(Collectors.toList());
     }
 
+    // 개발일지 단건 조회
     @Transactional
     public DevelopDiaryResponseDto findDevelopDiary(Long id){
         DevelopDiary developDiary = developDiaryRepository.findById(id).get();
         return new DevelopDiaryResponseDto().createDiaryDto(developDiary);
     }
 
+    // 개발일지 생성
     @Transactional
     public DevelopDiary createDevelopDiary(DevelopDiaryRequestDto dto){
         Project project = projectRepository.findById(dto.getId()).get();
@@ -47,6 +50,7 @@ public class DevelopDiaryService {
         return developDiaryRepository.save(developDiary);
     }
 
+    // 개발일지 수정
     @Transactional
     public DevelopDiary updateDevelopDiary(Long id, DevelopDiaryUpdateDto dto){
         DevelopDiary developDiary = developDiaryRepository.findById(id)
@@ -54,6 +58,7 @@ public class DevelopDiaryService {
         return developDiary.update(dto);
     }
 
+    // 개발일지 삭제
     @Transactional
     public Long deleteDevelopDiary(Long id){
         DevelopDiary developDiary = developDiaryRepository.findById(id)

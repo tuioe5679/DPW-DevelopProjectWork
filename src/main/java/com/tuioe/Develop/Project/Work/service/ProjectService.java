@@ -25,8 +25,7 @@ public class ProjectService {
 
     private final UserRepository userRepository;
 
-    private final HttpSession httpSession;
-
+    // 프로젝트 목록 조회
     @Transactional
     public List<ProjectListResponseDto> findAllProject(){
         return projectRepository.findAll().stream()
@@ -34,12 +33,14 @@ public class ProjectService {
                 .collect(Collectors.toList());
     }
 
+    // 프로젝트 단건 조회
     @Transactional
     public ProjectResponseDto findProject(Long id){
         Project project = projectRepository.findById(id).get();
         return new ProjectResponseDto().createProDto(project);
     }
 
+    // 프로젝트 생성
     @Transactional
     public Project createProject(ProjectRequestDto dto){
         String email = CustomOAuth2UserService.sessionUser.getEmail();
@@ -47,6 +48,7 @@ public class ProjectService {
         return projectRepository.save(dto.toEntity(user.get()));
     }
 
+    // 프로젝트 수정
     @Transactional
     public Project updateProject(Long id, ProjectUpdateDto dto){
         Project project = projectRepository.findById(id)
@@ -54,6 +56,7 @@ public class ProjectService {
         return project.update(dto);
     }
 
+    // 프로젝트 삭제
     @Transactional
     public Long deleteProject(Long id){
         Project project = projectRepository.findById(id)

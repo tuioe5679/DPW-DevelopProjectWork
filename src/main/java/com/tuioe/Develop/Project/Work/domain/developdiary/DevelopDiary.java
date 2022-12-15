@@ -9,7 +9,6 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
@@ -30,13 +29,13 @@ public class DevelopDiary {
     @Column(nullable = false,length = 2000)
     private String content;
 
-    @CreatedDate
+    @CreatedDate// 생성 날짜 자동 생성
     @Column(nullable = false)
     private LocalDateTime createDate;
 
-    @ManyToOne(fetch = FetchType.EAGER)// 지연 로딩 (빠른 속도 처리가능)
-    @JoinColumn(name = "pro_id",nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
+    @ManyToOne(fetch = FetchType.EAGER)// Pro:Develop = 1:N 관계
+    @JoinColumn(name = "pro_id",nullable = false)// pro_id로 외래키로 지정,널값 허용 X
+    @OnDelete(action = OnDeleteAction.CASCADE)// Project 삭제시 연관된 Develop 삭제
     private Project project;
 
     @Builder

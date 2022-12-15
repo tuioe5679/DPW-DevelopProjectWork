@@ -2,7 +2,6 @@ package com.tuioe.Develop.Project.Work.dto.developdiary;
 
 import com.tuioe.Develop.Project.Work.domain.developdiary.DevelopDiary;
 import lombok.Getter;
-
 import java.time.LocalDateTime;
 
 @Getter
