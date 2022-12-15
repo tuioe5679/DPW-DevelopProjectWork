@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "NanumSquareRoundL";
+    src: url(../font/NanumSquareR.otf);
+}
+
+body{
+    margin: 0px;
+    background-color: rgb(251, 251, 251);
+    font-family: "NanumSquareRoundL";
+}
+
+.diaryDetail_container{
+    width: 1000px;
+    height: 950px;
+    margin: 0 auto;
+    margin-top: 125px;
+    margin-bottom: 45px;
+    background-color: rgb(255, 255, 255);
+}
+
+.diary_button{
+    float: right;
+    margin-top: -70px;
+    display: flex;
+}
+
+.diary_button button {
+    margin-left: 20px;
+    width: 70px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    font-family: "NanumSquareRoundL";
+}
+
+.diary_button .submit_btn:hover{
+    background-color: #26ff6e;
+}
+
+.diary_button .cancel_btn:hover{
+    background-color: #ff2424;
+}
+
+.diary_button .submit_btn{
+    background-color: #46ff84;
+}
+
+.diary_button .cancel_btn{
+    background-color: #ff4646;
+}
+
+.diary_box{
+    margin: 50px 50px;
+    padding-top: 20px;
+}
+.diary_content{
+    margin-top: 30px;
+}
