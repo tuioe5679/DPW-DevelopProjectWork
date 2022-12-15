@@ -61,19 +61,19 @@ function DevelopDiary() {
                         <div class="project_title">{project.title}</div>
                         <div class="project_Develop">{project.username}</div>
                     </div>
-                    <div class="diary_title">
+                    <div class="input_diary_title">
                         <h3>제목</h3>
                         <div class="input">
                             <input class="title_input" type='text' placeholder='제목 입력' onChange={getValue} name='title'></input>
                         </div>
                     </div>
-                    <div class="diary_content">
+                    <div class="input_diary_content">
                         <h3>개발일지 내용</h3>
                         <div class="input">
                             <textarea type='text' onChange={getValue} placeholder='개발일지를 작성하세요' name="content"></textarea>
                         </div>
                     </div>
-                    <div class="diary_button">
+                    <div class="input_diary_button">
                         <button class="submit_btn" onClick={submitPosting}>작성완료</button>
                         <button class="cancel_btn" onClick={() => navigate('/')}>취소하기</button>
                     </div>

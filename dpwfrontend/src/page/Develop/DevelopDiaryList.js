@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../../css/developDiaryList.css'
 import Axios from 'axios';
 import Header from '../../page/component/Header';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import dayjs from 'dayjs';
 
 function Main() {
@@ -17,13 +17,14 @@ function Main() {
         }).catch(err => console.log(err));
     }, [])
 
+
     return (
         <div>
             <Header></Header>
             <div class="diaryList_container">
                 {developDiaryList.map(item =>
                     <div class="diaryList_box">
-                        <a href="/project">
+                        <Link to={`/developDiaryDeatil/${item.id}`}>
                             <div class="diaryList_main">
                                 <div class="board_box">
                                     <div class="title_box">
@@ -43,7 +44,7 @@ function Main() {
                                     <p class="texts">{item.content}</p>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                 )}
             </div>

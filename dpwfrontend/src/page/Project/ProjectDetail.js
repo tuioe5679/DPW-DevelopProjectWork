@@ -42,7 +42,7 @@ function ProjectDetail() {
                         </div>
                         <div class="devlopDiary">
                             <h3>개발일지</h3>
-                            <button onClick={() => navigate('/DevelopDiaryWrite/' + id)}>작성</button>
+                            <button onClick={() => navigate('/developDiaryWrite/' + id)}>작성</button>
                             <div class="developDiary_List">
                                 <Link to={`/developDiaryList/${id}`}><div class="develop_data">더보기</div></Link>
                             </div>
