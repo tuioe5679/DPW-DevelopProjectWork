@@ -91,6 +91,28 @@ body{
     font-family: "NanumSquareRoundL";
 }
 
+.project_btn {
+    float: right;
+    margin-top: -55px;
+}
+
+.project_btn button {
+    margin: 10px;
+    height: 30px;
+    width: 75px;
+    background-color: #ff3c3c;
+    color: white;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: "NanumSquareRoundL";
+}
+
+.project_btn .update_btn {
+    background-color: #4bff78;
+}
+
 .devlopDiary button:hover{
     background-color: #4bffc3;
 }

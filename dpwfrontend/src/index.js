@@ -15,7 +15,7 @@ render(
       <Route path="write" element={<ProjectWrite />} />
       <Route path="project/:id" element={<ProjectDetail />} />
       <Route path="DevelopDiaryWrite/:id" element={<DevelopDiaryWrite />} />
-      <Route path="developDiaryList" element={<DevelopDiaryList />} />
+      <Route path="developDiaryList/:id" element={<DevelopDiaryList />} />
     </Routes>
   </BrowserRouter>,
   rootElement
