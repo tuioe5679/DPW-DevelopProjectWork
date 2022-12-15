@@ -34,7 +34,7 @@ public class DevelopDiary {
     @Column(nullable = false)
     private LocalDateTime createDate;
 
-    @ManyToOne(fetch = FetchType.LAZY)// 지연 로딩 (빠른 속도 처리가능)
+    @ManyToOne(fetch = FetchType.EAGER)// 지연 로딩 (빠른 속도 처리가능)
     @JoinColumn(name = "pro_id",nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Project project;
