@@ -57,7 +57,7 @@ function DevelopDiary() {
                     <h3 class="page_title">개발일지 {nowdate}</h3>
                     <div class="project_data">
                         <h3>프로젝트</h3>
-                        <img class="img" src="/img/NackHacker.jpg" alt="" />
+                        <img class="img" src="/img/1.png" alt="" />
                         <div class="project_title">{project.title}</div>
                         <div class="project_Develop">{project.username}</div>
                     </div>
@@ -75,7 +75,7 @@ function DevelopDiary() {
                     </div>
                     <div class="diary_button">
                         <button class="submit_btn" onClick={submitPosting}>작성완료</button>
-                        <button class="cancel_btn">취소하기</button>
+                        <button class="cancel_btn" onClick={() => navigate('/')}>취소하기</button>
                     </div>
                 </div>
             </div>
