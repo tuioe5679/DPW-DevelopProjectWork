@@ -58,7 +58,7 @@ public class Project {
     public Project update(ProjectUpdateDto dto){
         this.title = dto.getTitle();
         this.content = dto.getContent();
-        this.endDate = dto.getStartDate();
+        this.giturl = dto.getGiturl();
         return this;
     }
 

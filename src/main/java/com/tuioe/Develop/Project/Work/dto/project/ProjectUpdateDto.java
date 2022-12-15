@@ -13,20 +13,13 @@ public class ProjectUpdateDto {
     private String content;
 
     private String image;
-
-    private String startDate;
-
-    private String endDate;
-
     private String giturl;
 
     @Builder
-    public ProjectUpdateDto(String title, String content, String image, String startDate, String endDate, String giturl) {
+    public ProjectUpdateDto(String title, String content, String image, String giturl) {
         this.title = title;
         this.content = content;
         this.image = image;
-        this.startDate = startDate;
-        this.endDate = endDate;
         this.giturl = giturl;
     }
 }
