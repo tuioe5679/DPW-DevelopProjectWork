@@ -157,7 +157,7 @@ Spring boot의 OAuth2 인증 방식을 통해서 로그인 기능을 구현 프�
 
 추후 Springboot,React 배포 ([AWS](https://aws.amazon.com/ko/),[Vercel](https://vercel.com/))
 
-### react 사용 라이브러리 
+## react 사용 라이브러리 
 
 axios: npm install axios
 
