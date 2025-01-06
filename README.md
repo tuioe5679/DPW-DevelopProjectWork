@@ -1,4 +1,8 @@
-# DPW-DevelopProjectWork
+# DPW-DevelopProjectWork 
+<img src="https://img.shields.io/badge/Java-2F7293?style=flat-square&logo=OpenJDK&logoColor=white"/> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white"/> 
+<img src="https://img.shields.io/badge/SpringBoot-6DB33F?style=flat-square&logo=Spring&logoColor=white"/> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/> 
+<img src="https://img.shields.io/badge/IntelliJ IDEA-3955A3?style=flat-square&logo=IntelliJ IDEA&logoColor=white"/> <img src="https://img.shields.io/badge/VS Code-007ACC?style=flat-square&logo=Visual Studio Code&logoColor=white"/> 
+<img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white"/> 
 
 개발 기간: **2022년 12월 2일 ~ 2022년 12월 16일** 
 
@@ -7,6 +11,7 @@
 
 DPW는 IT 개발 프로젝트를 개발자들이 쉽게 관리할수 있는 웹 사이트 개발 프로젝트입니다 <br>
 프로젝트를 생성하여 관리하고 개발일지를 작성하여 💎보상을 얻을수 있습니다 
+
 
 - [개발환경](#개발환경)
 
